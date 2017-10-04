@@ -27,9 +27,8 @@ public class Fraction {
 	public Fraction(double decimal) {
 		String decString = Double.toString(decimal);
 		int frontNum = Integer.parseInt(decString.substring(0, decString.indexOf('.')));
-		int endNum = Integer.parseInt(decString.substring(decString.indexOf('.')));
-		int numDec = decString.length() - decString.indexOf('.');
-
+		int endNum = Integer.parseInt(decString.substring(decString.indexOf('.') + 1));
+		int numDec = decString.length() - decString.indexOf('.') - 1;
 	}
 
 	/**
