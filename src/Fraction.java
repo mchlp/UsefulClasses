@@ -23,6 +23,11 @@ public class Fraction {
 		reduce();
 	}
 
+	/**
+	 * creates a Fraction object for an integer
+	 * 
+	 * @param integer
+	 */
 	public Fraction(int integer) {
 		this(integer, 1);
 	}
