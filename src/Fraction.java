@@ -1,9 +1,12 @@
-
 public class Fraction {
 
 	private int numerator;
 	private int denominator;
 	private boolean improper;
+
+	public Fraction() {
+		this(0, 1);
+	}
 
 	/**
 	 * creates a Fraction object when the numerator and denominator is provided
@@ -22,13 +25,6 @@ public class Fraction {
 
 	public Fraction(int integer) {
 		this(integer, 1);
-	}
-
-	public Fraction(double decimal) {
-		String decString = Double.toString(decimal);
-		int frontNum = Integer.parseInt(decString.substring(0, decString.indexOf('.')));
-		int endNum = Integer.parseInt(decString.substring(decString.indexOf('.') + 1));
-		int numDec = decString.length() - decString.indexOf('.') - 1;
 	}
 
 	/**
@@ -66,8 +62,8 @@ public class Fraction {
 		int temp;
 
 		while (true) {
-			if (b == 0) {
-				return b;
+			if (smaller == 0) {
+				return larger;
 			}
 			temp = larger;
 			larger = smaller;
