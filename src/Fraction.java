@@ -77,7 +77,7 @@ public class Fraction {
 	}
 
 	/**
-	 * @return f the fraction is an improper fraction
+	 * @return if the fraction is an improper fraction
 	 */
 	public boolean isImproper() {
 		return improper;
@@ -104,4 +104,8 @@ public class Fraction {
 	public Fraction add(int num) {
 		return this.add(new Fraction(num));
 	}
+
+    public Fraction multiply(Fraction fraction) {
+        return new Fraction(this.numerator * fraction.numerator, this.denominator * fraction.denominator);
+    }
 }
